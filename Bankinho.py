@@ -3,6 +3,17 @@ datetime = datetime.now()
 print(datetime)
 menuPrincipal = (['Fazer um PIX', 'Histórico de Transações', 'Sair'])
 
+def leiaInt(msg):
+    while True:
+        try: 
+            n = int(input(msg))
+        except (ValueError, TypeError):
+            print("ERRO: Por favor instira um valor válido")
+            continue
+        else:
+            return n 
+
+
 #Pegar valor do pix e pra quem mandar
 #Registrar data e hora
 #Armazenar essas informações dentro de algum lugar(p.o.o. talvez? class "pix"?)
@@ -10,7 +21,7 @@ def pix():
     global valor
     global pessoa
     global datahora
-    valor = float(input("Qual é o valor do PIX?"))
+    valor = leiaInt("Qual é o valor do PIX?")
     pessoa = str(input("pra quem vc quer fazer o PIX?"))
     datahora = datetime.now()
     print(f'''Valor: {valor}
