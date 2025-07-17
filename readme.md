@@ -1,1 +1,3 @@
-O projeto é fazer um sistema bancário rodando no prompt.
+# Sistema Bancário
+O projeto é fazer um sistema bancário em Python.
+
